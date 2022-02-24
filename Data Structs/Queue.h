@@ -3,15 +3,16 @@
 #include <string>
 #include "Node.h"
 
-class Stack {
-	Node* _top;
+class Queue {
+	Node* _first;
+	Node* _last;
 	int _length;
-	bool isEmpty();
 
 public:
-	Stack();
+	Queue();
+	bool isEmpty();
 	void push(std::string);
 	std::string pop();
 	std::string peek();
-	void printStack();
+	void printQueue();
 };
