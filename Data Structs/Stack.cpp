@@ -5,13 +5,13 @@
 #include "Node.h"
 
 Stack::Stack() 
-	: _top{ NULL }, _length{ 0 }
+	: _top{ nullptr }, _length{ 0 }
 {
 }
 
 bool Stack::isEmpty()
 {
-	if (_top == NULL)	//stack is empty if top is empty
+	if (_top == nullptr)	//stack is empty if top is empty
 		return true;
 	else
 		return false;

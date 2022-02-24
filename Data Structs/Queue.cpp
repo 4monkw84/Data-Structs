@@ -5,13 +5,13 @@
 #include "Node.h"
 
 Queue::Queue()
-	: _first{ NULL }, _last{ NULL }, _length{ 0 }
+	: _first{ nullptr }, _last{ nullptr }, _length{ 0 }
 {
 }
 
 bool Queue::isEmpty()
 {
-	if (_first == NULL)				//queue is empty if _first is empty
+	if (_first == nullptr)				//queue is empty if _first is empty
 		return true;
 	else
 		return false;
