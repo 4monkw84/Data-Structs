@@ -2,6 +2,7 @@
 
 #include "Stack.h"
 #include "Queue.h"
+#include "LinkedList.h"
 
 int main()
 {
@@ -47,6 +48,28 @@ int main()
 	std::cout << "Popping queue: " << exampleQueue.pop() << std::endl;
 
 	std::cout << "Peeking at front of empty queue: " << exampleQueue.peek() << std::endl;
+
+	std::cout << "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
+
+	//showcase of Linked List
+	std::cout << "LINKED LIST SHOWCASE:\n";
+
+	LinkedList exampleList;
+
+	exampleList.insertBack("one");
+	exampleList.insertBack("two");
+	exampleList.insertBack("three");
+
+	exampleList.insertFront("four");
+
+	std::cout << "Printing list:\n";
+	exampleList.printList();
+
+	std::cout << "Deleting last element: " << exampleList.deleteBack() << std::endl;
+	std::cout << "Deleting first element: " << exampleList.deleteFront() << std::endl;
+
+	std::cout << "Printing list:\n";
+	exampleList.printList();
 
 	return 0;
 }
