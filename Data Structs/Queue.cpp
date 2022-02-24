@@ -5,13 +5,13 @@
 #include "Node.h"
 
 Queue::Queue()
-	: _first{ nullptr }, _last{ nullptr }, _length{ 0 }
+	: _front{ nullptr }, _back{ nullptr }, _length{ 0 }
 {
 }
 
 bool Queue::isEmpty()
 {
-	if (_first == nullptr)				//queue is empty if _first is empty
+	if (_front == nullptr)				//queue is empty if _first is empty
 		return true;
 	else
 		return false;
@@ -23,11 +23,11 @@ void Queue::push(std::string value)
 	newNode->_data = value;			//set value at new node
 
 	if (isEmpty())					//check if new node is first in queue
-		_first = newNode;			//if first in queue, set it as starting node
+		_front = newNode;			//if first in queue, set it as starting node
 	else							
-		_last->_next = newNode;		//if not first in queue, set _next for last in queue to new node
+		_back->_next = newNode;		//if not first in queue, set _next for last in queue to new node
 
-	_last = newNode;				//set last to new node
+	_back = newNode;				//set last to new node
 	_length++;						//update current number of nodes
 }
 
@@ -39,9 +39,9 @@ std::string Queue::pop()
 		return "\0";
 	}
 
-	std::string valueAtNode = _first->_data;					//get data before node deletion
-	Node* cleanup = _first;										//set pointer to be deleted
-	_first = _first->_next;										//set first to next in queue
+	std::string valueAtNode = _front->_data;					//get data before node deletion
+	Node* cleanup = _front;										//set pointer to be deleted
+	_front = _front->_next;										//set first to next in queue
 	delete cleanup;												//delete popped node
 	_length--;													//update current number of nodes
 	return valueAtNode;											//return value of popped node
@@ -55,7 +55,7 @@ std::string Queue::peek()
 		return "\0";
 	}
 
-	return _first->_data;										//return value of front of queue
+	return _front->_data;										//return value of front of queue
 }
 
 void Queue::printQueue()
@@ -63,7 +63,7 @@ void Queue::printQueue()
 	if (isEmpty())												//check if queue is empty before printing
 		std::cout << "Invalid action, Queue is empty.\n";
 
-	Node* targetToPrint = _first;								//set target to first in queue
+	Node* targetToPrint = _front;								//set target to first in queue
 	for (int i = 0; i < _length; i++)
 	{
 		std::cout << targetToPrint->_data << "\n";

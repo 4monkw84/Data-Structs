@@ -4,8 +4,8 @@
 #include "Node.h"
 
 class Queue {
-	Node* _first;
-	Node* _last;
+	Node* _front;
+	Node* _back;
 	int _length;
 
 public:

@@ -6,7 +6,10 @@
 
 int main()
 {
-	//Showcase of stack
+	//Examples of all three included data types below, uncomment section you wish to preview
+
+	//showcase of stack
+	/*
 	std::cout << "STACK SHOWCASE:\n";
 
 	Stack exampleStack;
@@ -28,10 +31,12 @@ int main()
 
 	std::cout << "Printing empty stack\n";
 	exampleStack.printStack();
+	*/
 
-	std::cout << "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\
 
 	//showcase of Queue
+	/*
 	std::cout << "QUEUE SHOWCASE:\n";
 
 	Queue exampleQueue;
@@ -48,10 +53,12 @@ int main()
 	std::cout << "Popping queue: " << exampleQueue.pop() << std::endl;
 
 	std::cout << "Peeking at front of empty queue: " << exampleQueue.peek() << std::endl;
+	*/
 
-	std::cout << "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\
 
 	//showcase of Linked List
+	
 	std::cout << "LINKED LIST SHOWCASE:\n";
 
 	LinkedList exampleList;
@@ -60,16 +67,19 @@ int main()
 	exampleList.insertBack("two");
 	exampleList.insertBack("three");
 
-	exampleList.insertFront("four");
+	exampleList.insertFront("zero");
 
-	std::cout << "Printing list:\n";
+	exampleList.insertAt(10, "end");
+
+	std::cout << "\nPrinting list:\n";
 	exampleList.printList();
 
-	std::cout << "Deleting last element: " << exampleList.deleteBack() << std::endl;
-	std::cout << "Deleting first element: " << exampleList.deleteFront() << std::endl;
+	std::cout << "\nDeleting last element: " << exampleList.deleteBack() << std::endl;
+	std::cout << "\nDeleting first element: " << exampleList.deleteFront() << std::endl;
 
-	std::cout << "Printing list:\n";
+	std::cout << "\nPrinting list:\n";
 	exampleList.printList();
+	
 
 	return 0;
 }

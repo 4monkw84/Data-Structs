@@ -5,7 +5,8 @@
 
 class LinkedList {
 private:
-	Node* _head;
+	Node* _front;
+	Node* _back;
 	int _length = 0;
 
 public:
@@ -15,6 +16,7 @@ public:
 
 	void insertFront(std::string);
 	void insertBack(std::string);
+	void insertAt(int, std::string);
 
 	std::string deleteFront();
 	std::string deleteBack();
