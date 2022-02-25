@@ -1,3 +1,3 @@
 # Data-Structs
 
-An implementation of a stack and an array in C++ using pointers
+An implementation of a stack, a queue and a doubly linked list in C++ using pointers
